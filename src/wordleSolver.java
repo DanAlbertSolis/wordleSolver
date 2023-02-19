@@ -5,9 +5,19 @@ import java.util.*;
 import java.util.List;
 import java.util.Scanner;
 
-import java.io.*;
-import java.util.*;
-import org.json.simple.*;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+import java.io.FileReader;
+import java.util.Iterator;
+import java.util.Map;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.*;
 
 
@@ -18,6 +28,15 @@ public class wordleSolver {
     List<Character> badLetters = new ArrayList<Character>();
     Character finalWord[] = {};
     String[] sixLetterWords = new String[100];
+
+    //Creating a JSONObject object
+
+    Object o = new JSONParser().parse((new FileReader(file.json)));
+    JSONObject jsonObject = (JSONObject) o;
+
+
+
+
 
 
 
