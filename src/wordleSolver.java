@@ -1,18 +1,14 @@
-import java.io.File;
-import java.io.FileInputStream;
+import java.io.*;
 import java.lang.reflect.Array;
 import java.util.*;
 import java.util.List;
 import java.util.Scanner;
 
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import java.io.FileReader;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -29,10 +25,19 @@ public class wordleSolver {
     Character finalWord[] = {};
     String[] sixLetterWords = new String[100];
 
-    //Creating a JSONObject object
+    List<List<String>> records = new ArrayList<>();
 
-    Object o = new JSONParser().parse((new FileReader(file.json)));
-    JSONObject jsonObject = (JSONObject) o;
+    try (BufferedReader br = new BufferedReader(new FileReader("book.csv"))) {
+        String line;
+        while ((line = br.readLine()) != null) {
+            String[] values = line.split(",");
+            records.add(Arrays.asList(values));
+        }
+    }
+
+    catch (Exception e){
+
+    }
 
 
 
@@ -46,7 +51,7 @@ public class wordleSolver {
     /**
      * Default constructor, sets instance variables to default values
      */
-    public wordleSolver(){
+    public wordleSolver() throws FileNotFoundException, IOException {
 
     }
 
