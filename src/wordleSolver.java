@@ -17,7 +17,9 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.*;
 
 
-public class wordleSolver {
+class wordleChecker {
+    List<List<String>> wordList = new ArrayList<>();
+
     Scanner stdin = new Scanner(System.in);
     String initWord, result;
     List<Character> possibleLetters = new ArrayList<Character>();
@@ -25,34 +27,17 @@ public class wordleSolver {
     Character finalWord[] = {};
     String[] sixLetterWords = new String[100];
 
-    List<List<String>> records = new ArrayList<>();
-
-    try (BufferedReader br = new BufferedReader(new FileReader("book.csv"))) {
-        String line;
-        while ((line = br.readLine()) != null) {
-            String[] values = line.split(",");
-            records.add(Arrays.asList(values));
-        }
-    }
-
-    catch (Exception e){
-
-    }
-
-
-
-
-
-
-
-
 
 
     /**
      * Default constructor, sets instance variables to default values
      */
-    public wordleSolver() throws FileNotFoundException, IOException {
+    public wordleChecker() {
 
+    }
+
+    public wordleChecker(List<List<String>> listArg) {
+    wordList = listArg;
     }
 
     public void initCheck(){
@@ -62,9 +47,6 @@ public class wordleSolver {
         result = stdin.next();
     }
 
-    public void jsonImporter(){
-
-    }
 
     public void checker(String input){
         for (int i = 0; i <= input.length(); i++){
@@ -88,5 +70,26 @@ public class wordleSolver {
 
     }
 
+
+}
+
+public class wordleSolver{
+
+    public static void main (String[] args){
+        List<List<String>> wordList = new ArrayList<>();
+
+
+        try (BufferedReader br = new BufferedReader(new FileReader("fiveletterwords.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] values = line.split(",");
+                wordList.add(Arrays.asList(values));
+            }
+        }
+
+        catch (Exception e){
+
+        }
+    }
 
 }
