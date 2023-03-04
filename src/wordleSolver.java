@@ -19,6 +19,8 @@ import org.json.simple.parser.*;
 
 class wordleChecker {
     List<String> wordList = new ArrayList<>();
+    List<String> badWordList = new ArrayList<>();
+
 
     Scanner stdin = new Scanner(System.in);
     String word, result;
@@ -51,7 +53,14 @@ class wordleChecker {
         System.out.print("Enter the results of the initial guess in order from first letter to last letter (B = black (not used), G = green (correct spot), Y = yellow (used, but in the wrong spot), for example: BGYYB \n");
         result = stdin.next();
         letterSorter(word,result);
-        checker();
+        System.out.println("LetterSorter() finished");
+        //checker();
+        wordRemover();
+        System.out.println("wordRemover() finished");
+
+        //printPossibleWords();
+        //System.out.println("printPossibleWords() is finished");
+
     }
 
     public void checker(){
@@ -71,7 +80,7 @@ class wordleChecker {
 
 
 
-    public void printArrays(){
+    public void printStatus(){
         System.out.println("The possible letters so far are: ");
         for (int i = 0; i <= possibleLetters.size()- 1; i++){
             System.out.print(possibleLetters.get(i)+" ");
@@ -88,6 +97,13 @@ class wordleChecker {
         System.out.println("The word we have so far is: ");
         for (int i = 0; i <= finalWord.size() - 1; i++){
             System.out.print(finalWord.get(i)+" ");
+        }
+    }
+
+    public void printPossibleWords(){
+        System.out.println("printPossibleWords() is called");
+        for (int i = 0; i <= wordList.size()-1; i++){
+            System.out.println(wordList.get(i));
         }
     }
 
@@ -114,13 +130,13 @@ class wordleChecker {
                 System.out.println("Added possible letter: "+ input.charAt(i));
             }
             else if (result.charAt(i) == 'G' || result.charAt(i) == 'g'){
-                finalWord.add(input.charAt(i));
+                finalWord.add(i,input.charAt(i));
                 System.out.println("Added letter "+ input.charAt(i) + " to the final word");
             }
         }
         System.out.println("\nFinished looping through the results...");
         System.out.println("Successfully added all good or bad letters");
-        printArrays();
+        printStatus();
     }
 
 
@@ -128,29 +144,55 @@ class wordleChecker {
      * returns arrayList of possible words
      * @return
      */
-    public List<String> possibleWords(){
-        List<String> possibleWords = new ArrayList<>();
+    public void wordRemover(){
+        System.out.println("possibleWords() is called");
 
-        if (badLetters.size() >= 1){
-            for (int i = 0; i <= wordList.size() - 1; i++){
-                for (int j = 0; j <= wordList.get(i).length() - 1; j++){
-                    for (int k = 0; k <= badLetters.size() - 1; k++){
-                        if (wordList.get(i).charAt(j) == badLetters.get(k)){
-                            wordList.remove(i);
-                            System.out.println("Removed word " +wordList.get(i) +" because the letter " + wordList.get(i).charAt(j) + " exists " );
-                        }
+
+
+        /*for (int i = 0; i < badLetters.size(); i++){
+            for (int j = 0; j < wordList.size(); j++){
+                for (int k = 0; k < wordList.get(j).length(); k++){
+                    if (badLetters.get(i) == wordList.get(j).charAt(k)){
+                        wordList.remove(j);
+                        System.out.println("Removed word " +wordList.get(j) +" because the letter " + wordList.get(j).charAt(k));
                     }
                 }
             }
+        }*/
+
+
+        /*for (int i = 0; i < wordList.size(); i++){ //iterates through entire wordList arr
+            System.out.println(wordList.get(i) + " selected");
+            for (int j = 0; j < wordList.get(i).charAt(j);j++){ //iterates through entire word length of index i
+                System.out.println(wordList.get(i).charAt(j) + " letter selected");
+                for (int k = 0; k < badLetters.size(); k++){ //iterates thru badLetters arr
+                    System.out.println(badLetters.get(k) + " bad letter selected");
+                    if (badLetters.get(k) == wordList.get(i).charAt(j)){
+                        System.out.println(wordList.get(i) + " has been removed");
+                        badWordList.add(wordList.get(i));
+                    }
+                }
+
+            }
+
+        }*/
+
+        for (int i = 0; i < wordList.size(); i++) { //iterates through entire wordList arr
+            System.out.println("word selected is " + wordList.get(i));
+            boolean wordRemoved = false;
+            while (wordRemoved == false) {
+                for (int j = 0; j < wordList.get(i).charAt(j);j++){ //iterates through entire word length of index i
+                    for (int k = 0; k < badLetters.size(); k++){ //iterates thru badLetters arr
+                        if (badLetters.get(k) == wordList.get(i).charAt(j)){
+                            wordList.remove(i);
+                            //wordRemoved = true;
+                        }
+                    }
+
+                }
+
+            }
         }
-
-        if (possibleLetters.size() >= 1){
-            for (int i = 0; i <= wordList)
-        }
-
-
-
-        return wordList;
     }
 }
 
@@ -167,7 +209,7 @@ public class wordleSolver{
                 wordList.add(line);
                 //System.out.println(wordList.get(i++)); //used to test if the words are correctly inputted into the array
             }
-            wordleChecker wordle1 = new wordleChecker();
+            wordleChecker wordle1 = new wordleChecker(wordList);
             wordle1.initCheck();
 
 
