@@ -41,7 +41,7 @@ class wordleChecker {
     }
 
     public void initCheck(){
-        System.out.print("What word was initially entered?");
+        System.out.print("What word was initially entered?\n");
         initWord = stdin.next();
         System.out.print("\nEnter the results of the initial guess");
         result = stdin.next();
@@ -76,15 +76,24 @@ class wordleChecker {
 public class wordleSolver{
 
     public static void main (String[] args){
+
         List<List<String>> wordList = new ArrayList<>();
 
 
         try (BufferedReader br = new BufferedReader(new FileReader("fiveletterwords.txt"))) {
+            List<String> lines = new ArrayList<String>();
+
+            while((String))
+
             String line;
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(",");
                 wordList.add(Arrays.asList(values));
             }
+
+            wordleChecker wordle1 = new wordleChecker(wordList);
+            wordle1.initCheck();
+            System.out.println(wordList.get(0));
         }
 
         catch (Exception e){

@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5680493-fcd4-40b4-b233-52cdf2168096" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/wordleSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wordleSolver.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,30 +29,27 @@
   </component>
   <component name="ProjectId" id="2Lw0zkBTSGWHfcjbvgqlxV9nrYL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/lib" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="wordleSolver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -67,6 +65,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -77,6 +87,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676767101620</updated>
+      <workItem from="1677909839356" duration="99000" />
+      <workItem from="1677909951277" duration="419000" />
+      <workItem from="1677910663317" duration="902000" />
+      <workItem from="1677911833292" duration="809000" />
     </task>
     <task id="LOCAL-00001" summary="3/3 commit">
       <created>1677909305227</created>
@@ -87,6 +101,9 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -104,5 +121,43 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="3/3 commit" />
     <option name="LAST_COMMIT_MESSAGE" value="3/3 commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="808" y="393" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1677910748091">
+      <screen x="0" y="0" width="1920" height="1010" />
+    </state>
+    <state x="808" y="393" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1010/1920.0.1920.1040@0.0.1920.1010" timestamp="1677910748091" />
+    <state x="585" y="98" key="CommitChangelistDialog2" timestamp="1677912702876">
+      <screen x="0" y="0" width="1920" height="1010" />
+    </state>
+    <state x="585" y="98" key="CommitChangelistDialog2/0.0.1920.1010/1920.0.1920.1040@0.0.1920.1010" timestamp="1677912702876" />
+    <state width="1877" height="131" key="GridCell.Tab.0.bottom" timestamp="1677912702888">
+      <screen x="0" y="0" width="1920" height="1010" />
+    </state>
+    <state width="1877" height="131" key="GridCell.Tab.0.bottom/0.0.1920.1010/1920.0.1920.1040@0.0.1920.1010" timestamp="1677912702888" />
+    <state width="1877" height="131" key="GridCell.Tab.0.center" timestamp="1677912702888">
+      <screen x="0" y="0" width="1920" height="1010" />
+    </state>
+    <state width="1877" height="131" key="GridCell.Tab.0.center/0.0.1920.1010/1920.0.1920.1040@0.0.1920.1010" timestamp="1677912702888" />
+    <state width="1877" height="131" key="GridCell.Tab.0.left" timestamp="1677912702888">
+      <screen x="0" y="0" width="1920" height="1010" />
+    </state>
+    <state width="1877" height="131" key="GridCell.Tab.0.left/0.0.1920.1010/1920.0.1920.1040@0.0.1920.1010" timestamp="1677912702888" />
+    <state width="1877" height="131" key="GridCell.Tab.0.right" timestamp="1677912702888">
+      <screen x="0" y="0" width="1920" height="1010" />
+    </state>
+    <state width="1877" height="131" key="GridCell.Tab.0.right/0.0.1920.1010/1920.0.1920.1040@0.0.1920.1010" timestamp="1677912702888" />
+    <state x="461" y="146" key="SettingsEditor" timestamp="1677911949106">
+      <screen x="0" y="0" width="1920" height="1010" />
+    </state>
+    <state x="461" y="146" key="SettingsEditor/0.0.1920.1010/1920.0.1920.1040@0.0.1920.1010" timestamp="1677911949106" />
+    <state x="0" y="327" key="com.intellij.ide.util.TipDialog" timestamp="1677909843263">
+      <screen x="0" y="0" width="1920" height="1010" />
+    </state>
+    <state x="0" y="327" key="com.intellij.ide.util.TipDialog/0.0.1920.1010/1920.0.1920.1040@0.0.1920.1010" timestamp="1677909843263" />
+    <state x="616" y="233" key="run.anything.popup" timestamp="1677911735730">
+      <screen x="0" y="0" width="1920" height="1010" />
+    </state>
+    <state x="616" y="233" key="run.anything.popup/0.0.1920.1010/1920.0.1920.1040@0.0.1920.1010" timestamp="1677911735730" />
   </component>
 </project>
