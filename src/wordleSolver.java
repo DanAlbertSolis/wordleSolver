@@ -76,24 +76,17 @@ class wordleChecker {
 public class wordleSolver{
 
     public static void main (String[] args){
+        String line;
+        int i = 0;
 
-        List<List<String>> wordList = new ArrayList<>();
-
-
-        try (BufferedReader br = new BufferedReader(new FileReader("fiveletterwords.txt"))) {
-            List<String> lines = new ArrayList<String>();
-
-            while((String))
-
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] values = line.split(",");
-                wordList.add(Arrays.asList(values));
+        List<String> wordList = new ArrayList<String>();
+        
+        try (BufferedReader br = new BufferedReader(new FileReader("sgb-words.txt"))) {
+            while((line= br.readLine()) != null){
+                wordList.add(line);
+                System.out.println(wordList.get(i++));
             }
 
-            wordleChecker wordle1 = new wordleChecker(wordList);
-            wordle1.initCheck();
-            System.out.println(wordList.get(0));
         }
 
         catch (Exception e){
