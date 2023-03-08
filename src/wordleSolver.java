@@ -53,11 +53,15 @@ class wordleChecker {
         letterSorter(word, result);
         System.out.println("LetterSorter() finished");
         //checker();
+
+        printPossibleWords();
+        System.out.println("printPossibleWords() is finished");
+
         wordRemover();
         System.out.println("wordRemover() finished");
 
-        //printPossibleWords();
-        //System.out.println("printPossibleWords() is finished");
+        printPossibleWords();
+        System.out.println("\nprintPossibleWords() is finished");
 
     }
 
@@ -100,7 +104,10 @@ class wordleChecker {
     public void printPossibleWords() {
         System.out.println("printPossibleWords() is called");
         for (int i = 0; i <= wordList.size() - 1; i++) {
-            System.out.println(wordList.get(i));
+            if (i % 10==0){
+                System.out.print("\n");
+            }
+            System.out.print(wordList.get(i) + " ,");
         }
     }
 
@@ -141,9 +148,29 @@ class wordleChecker {
      * @return
      */
     public void wordRemover() {
+        for (int i = 0; i < badLetters.size(); i++){ //for each character in the array
+            for (String s : wordList) { //for each word on the word list
+                for (int k = 0; k < s.length(); k++) { //for each words letter
+                    if (s.charAt(k) == badLetters.get(i)){
+                        wordList.remove(s);
+                        break;
+                    }
+                }
+                /*int k = wordList.get(j).length(); //word length
+                int l = 0;
+                if (badLetters.get(i).equals(wordList.get(j).charAt(l++))){
+                    wordList.remove(j);
+                    break;
+                }*/
+
+            }
+        }
+
         for (int i = 0; i < wordList.size(); i++){
             System.out.println(i + " "+ wordList.get(i));
         }
+
+
     }
 }
 
