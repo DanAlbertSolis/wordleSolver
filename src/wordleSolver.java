@@ -1,20 +1,8 @@
 import java.io.*;
-import java.lang.reflect.Array;
 import java.util.*;
 import java.util.List;
 import java.util.Scanner;
-
-import java.util.LinkedHashMap;
-import java.util.Map;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-
 import java.util.Iterator;
-import java.util.Map;
-
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.*;
 
 
 class wordleChecker {
@@ -54,14 +42,13 @@ class wordleChecker {
         System.out.println("LetterSorter() finished");
         //checker();
 
-        printPossibleWords();
-        System.out.println("printPossibleWords() is finished");
 
         wordRemover();
         System.out.println("wordRemover() finished");
 
-        printPossibleWords();
-        System.out.println("\nprintPossibleWords() is finished");
+         //printPossibleWords();
+         //System.out.println("\nprintPossibleWords() is finished");
+        System.out.println("There are " + wordList.size() + " words in the list");
 
     }
 
@@ -102,7 +89,7 @@ class wordleChecker {
     }
 
     public void printPossibleWords() {
-        System.out.println("printPossibleWords() is called");
+        System.out.println("printPossibleWords() is called " + wordList.size());
         for (int i = 0; i <= wordList.size() - 1; i++) {
             if (i % 10==0){
                 System.out.print("\n");
@@ -142,35 +129,20 @@ class wordleChecker {
     }
 
 
-    /**
-     * returns arrayList of possible words
-     *
-     * @return
-     */
+
     public void wordRemover() {
         for (int i = 0; i < badLetters.size(); i++){ //for each character in the array
-            for (String s : wordList) { //for each word on the word list
+            for (int j = wordList.size() - 1 ; j >= 0; j--) { //for each word on the word list
+                String s  = wordList.get(j);
                 for (int k = 0; k < s.length(); k++) { //for each words letter
                     if (s.charAt(k) == badLetters.get(i)){
-                        wordList.remove(s);
+                        System.out.println("Removed word '" + wordList.get(j)+ "' from the list because the letter " + s.charAt(k) + " is at index " + k);
+                        wordList.remove(j);
                         break;
                     }
                 }
-                /*int k = wordList.get(j).length(); //word length
-                int l = 0;
-                if (badLetters.get(i).equals(wordList.get(j).charAt(l++))){
-                    wordList.remove(j);
-                    break;
-                }*/
-
             }
         }
-
-        for (int i = 0; i < wordList.size(); i++){
-            System.out.println(i + " "+ wordList.get(i));
-        }
-
-
     }
 }
 
