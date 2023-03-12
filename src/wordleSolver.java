@@ -163,12 +163,6 @@ class wordleChecker {
                     System.out.println("Map remover is entered 2, removed word " + wordList.get(a) + " because " + s.charAt(entry.getValue()) + " doesnt equal " + entry.getKey());
                     wordList.remove(a);
                 }
-                        /*for (int b = 0; b < s.length(); b++){ //for each words letter
-                            if (s.charAt(b) != entry.getKey()){
-                                wordList.remove(a);
-                                break;
-                            }
-                        }*/
             }
         }
 
