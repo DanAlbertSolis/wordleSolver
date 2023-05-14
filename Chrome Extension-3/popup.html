@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Wordle Checker</h1>
+
+        <div class="input-group">
+            <label for="inputWord">Word:</label>
+            <input type="text" id="inputWord" maxlength="5">
+        </div>
+
+        <div class="input-group">
+            <label for="inputResult">Result:</label>
+            <input type="text" id="inputResult" maxlength="5">
+        </div>
+
+        <button id="submitWord">Submit</button>
+
+        <h2>Status:</h2>
+        <p>Possible Letters: <span id="possibleLetters"></span></p>
+        <p>Bad Letters: <span id="badLetters"></span></p>
+        <p>Final Word: <span id="finalWord"></span></p>
+
+        <h2>Possible Words:</h2>
+        <div id="possibleWords"></div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
